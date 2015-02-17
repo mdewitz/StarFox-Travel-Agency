@@ -1,0 +1,19 @@
+{
+  "name": "StarFox-Travel-Agency",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mdewitz/StarFox-Travel-Agency",
+  "authors": [
+    "Mika <mikadewitz@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1"
+  }
+}
