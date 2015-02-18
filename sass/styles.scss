@@ -19,9 +19,7 @@ a{
   text-decoration: none;
 }
 header{
-  font-weight: 100;
   letter-spacing: 2px;
-  font-weight: 100;
   .row{
     background-color: $background_blue;
     background-image: url('/images/stars.svg');
@@ -36,12 +34,18 @@ header{
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: 10px;
+    font-weight: 100;
     a{
       margin-left: 50px;
+      color: $baby_blue;
     }
     span{
-      font-weight: 500;
+      color: $background_blue;
+      font-weight: 900;
     }
+  }
+  .top-bar .name h1 a{
+    color: $background_blue;
   }
   @media#{$small-only}{
     h1.desktop_logo a{
@@ -56,6 +60,12 @@ header{
       background-size: contain;
       width:35px;
     }  
+    .top-bar-section ul li > a{
+      border-top: 1px solid $baby_blue;
+      color: $baby_blue;
+      font-size: 1.2rem;
+      font-weight: 100;
+    }
   }
   @media#{$medium-up}{
     .desktop_logo{
@@ -79,18 +89,17 @@ header{
       width: 93%;
       margin-left: 3%;
       position: relative;
-
       .right{
         position: absolute;
         left: 20%;
-        @media#{$large-up}{
-          left: 30%;
-        }
         a{
           color: $baby_blue;
           :hover{
             color: white;
           }
+        }
+        @media#{$large-up}{
+          left: 30%;
         }
       }
     }
@@ -125,7 +134,7 @@ header{
     font-size: 1.3rem;
     letter-spacing: 3x;
     font-weight: 200;
-    margin-top: 150px;
+    margin: 170px 30px 0;
     span{
       font-weight: bold;
     }
@@ -156,7 +165,6 @@ header{
     @media#{$small-only}{
       top: 30px;
       left: 120px;
-      // left: 20%;
     }
     @media#{$medium-only}{
       left: 30%;
@@ -174,7 +182,6 @@ header{
     margin-top: 40px;
     padding-top: 13px;
     width: 35%;
-    // background-position-x: 20%;
     margin-left: 33%;
     @media#{$small-only}{
       margin-left: 2%;
@@ -186,7 +193,7 @@ header{
       width: 25%;
       margin: none;
       position: relative;
-      top: -60px;
+      top: -50px;
       right: 4%;
     }
    .more_info{
@@ -194,77 +201,108 @@ header{
       font-size: 1.2rem;
       font-weight: 200;
       margin-top: 40px;
-
-      @media#{$large-up}{
-      }
     }
   }
 }
 
 .options{
+  letter-spacing: 1px;
   background-color: white;
   color: white;
   text-align: center;
   padding: 20px;
-
   .moon, .earth, .jup_description{
     margin: 20px 0;
     background-color:$light_grey;
     border-radius: 5px;
     height: 300px;
     padding: 0 20px;
+    .description > p {
+      font-weight: 100;
+      letter-spacing: 1px;
+      line-height: 130%;
+      padding: 50px 0;
+      @media#{$small-only}{
+      margin: -35px 17%;
+      }
+      @media#{$medium-only}{
+        border-top: none;
+        padding: 0;
+        margin: 0;
+      }
+      @media#{$large-up}{
+      padding: 20px;
+      }
+    }
     @media#{$medium-only}{
       height: 160px;
       .description{
-        display: inline-block;
+        display: inline;
         float: right;
         width: 50%;
         text-align: left;
         padding: 35px;
       }
+    }
+    h2{
       p{
         font-weight: 100;
         line-height: 120%;
       }
-    }
-    h2{
       font-size: 1.5rem;
       font-weight: 400;
       color: white;
-      padding: 20px; 
-      border-bottom: 1px solid $light_underline;
+      padding: 20px 0; 
+      border-bottom: 1px solid $dark_underline;
+      box-shadow: 0px 23px 1px -23px white;
+      text-decoration-style: double;
       @media#{$medium-only}{
         border-bottom: none;
         padding: 0;
+        box-shadow: none;
+      }
+    }
+    .cost{
+      @media#{$medium-only}{
+      display: inline;
+        float: left;
+        width: 50%;
+        padding: 25px;
+         border-right: 1px solid $dark_underline; 
+        box-shadow: 5px 0 6px -6px white;
       }
     }
     h3{
       font-size: 4rem;
+      font-weight: 100;
       color: white;
-      padding: 20px;
-      text-decoration: underline;
-      font-weight: 200;
-      @media#{$medium-only}{
-        padding:none;
-        display: inline-block;
-        float: left;
-        width: 50%;
-        border-right: 1px solid $light_underline; 
+      border-bottom: 9px solid white;
+      display: inline-block;
+      @media#{$large-up}{
+        padding: none;
+        margin: none;
       }
     } 
   }
   .deals{
     height: 20px;
+    font-weight: 100;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
     h4{
       color: white;
       line-height: 120%;
+      font-size: 1rem;
     }
     h5{
       font-weight: 100;
       font-size: 2rem;
       color: white;
-      border-bottom: 1px solid $light_underline;
+      border-bottom: 1px solid $dark_underline;
+      box-shadow: 0px 23px 1px -23px white;
+      width: inherit;
       padding-bottom: 20px;
+
     }
     .jup_description{
       padding-top: 20px;
@@ -274,14 +312,13 @@ header{
       padding-top: 0;
       position: relative;
       top: -190px;
-       // margin-bottom: 0;
     }
     a{
       background-image: url('/images/arrow.svg');
       background-repeat: no-repeat;
       background-size: 40px;
-      background-position-x: 170px;
-      background-position-y: 20px;
+      background-position-x: 180px;
+      background-position-y: 23px;
       position: relative;
       top: -180px;
       left: -20px;
@@ -296,6 +333,7 @@ header{
     }
   }
 }
+
 .more_deals{
   background-color:$background_blue;
   height: 65px;
@@ -304,12 +342,12 @@ header{
   background-image: url('/images/arrow.svg');
   background-repeat: no-repeat;
   background-size: 40px;
-  background-position-x: 70%;
+  background-position-x: 63%;
   background-position-y: 10px;
   a{
   color: white;
   font-size: 20px;
-  margin-left: -25px;
+  margin-left: -35px;
   letter-spacing: 1px;
   }
   @media#{$large-up}{
@@ -325,6 +363,10 @@ footer{
     color: $light_grey;
     line-height:120%;
     padding-top: 20px;
+    @media#{$medium-only}{
+      margin: 20px 0 80px;
+      font-size: .9rem;
+    }
   }
   @media#{$large-up}{
     height: 90px;
@@ -332,4 +374,5 @@ footer{
     margin-bottom: 0;
   }
 }
+
 
